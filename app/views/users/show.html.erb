@@ -34,6 +34,13 @@
   <%= image_tag (@user.photo)%>
 </p>
 
+<p>Address:
+<%= @user.address %>
+</p>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?size=450x300&sensor=false&zoom=16&markers=#{@user.latitude}%2C#{@user.longitude}" %>
+
+
+
 
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>

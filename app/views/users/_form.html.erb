@@ -31,12 +31,11 @@
 
   <div class="field">
     <%= f.label :dob %><br />
-    <%= f.date_select :dob,{:start_year => 1920,:include_blank => true} %>
+    <%= f.text_field :dob, :id => :datepicker %>
   </div>
   <div class="field">
     <%= f.label :sex %><br />
 	<%= f.select :sex, ["M","F"] %> 
-    
   </div>
   <div class="field">
     <%= f.label :regular %><br />
@@ -45,6 +44,10 @@
    <div class="field">
     <%= f.label :Photo %><br />
     <%= f.text_field :photo %>
+  </div>
+  <div class="field">
+    <%= f.label :address %><br />
+    <%= f.text_field :address %>
   </div>
   <div class="actions">
     <%= f.submit "sign up now" %>

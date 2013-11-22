@@ -11,5 +11,22 @@
 // GO AFTER THE REQUIRES BELOW.
 //
 //= require jquery
+//= require jquery-ui
 //= require jquery_ujs
-//= require_tree .
+//= require_tree.
+
+
+$ (function(){
+	
+	$('#datepicker').datepicker({
+	dateFormat: 'dd-mm-yy',
+	changeMonth: true,
+	changeYear: true,
+	yearRange: "-5:+20",	
+	});
+	
+	$("input").focus(function(){
+	$(this).css("background-color","LightGray");
+	});
+	
+});
